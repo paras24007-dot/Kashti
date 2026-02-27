@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>For Kashti</title>
+
+<style>
+
+body{
+    background: linear-gradient(135deg,#f5f7fa,#e4ecf5);
+    font-family: Arial, Helvetica, sans-serif;
+    text-align:center;
+    margin-top:120px;
+    overflow:hidden;
+    transition:2s;
+}
+
+h1{
+    font-size:42px;
+    color:#333;
+}
+
+p{
+    font-size:22px;
+    color:#555;
+    padding:0 30px;
+}
+
+button{
+    margin-top:40px;
+    padding:18px 50px;
+    font-size:24px;
+    border:none;
+    border-radius:14px;
+    background:#333;
+    color:white;
+    cursor:pointer;
+    box-shadow:0 6px 15px rgba(0,0,0,0.2);
+}
+
+button:hover{
+    transform:scale(1.05);
+}
+
+.fade{
+opacity:0;
+transition:2s;
+}
+
+</style>
+</head>
+
+<body>
+
+<h1>Kashti</h1>
+
+<p>
+If we could pause everything for just a moment...
+</p>
+
+<p>
+No stress<br><br>
+No arguments<br><br>
+No misunderstandings
+</p>
+
+<p>
+Just quiet.
+</p>
+
+
+<button onclick="pauseWorld()">Pause ⏸</button>
+
+
+
+<script>
+
+function pauseWorld(){
+
+document.body.classList.add("fade");
+
+setTimeout(function(){
+
+document.body.innerHTML = `
+
+<h1 style="margin-top:140px">
+Everything paused.
+</h1>
+
+<p style="font-size:26px;margin-top:30px">
+
+No past.<br><br>
+No mistakes.<br><br>
+No overthinking.
+
+</p>
+
+<br><br>
+
+<p style="font-size:28px">
+
+Just us again.
+
+</p>
+
+<br><br>
+
+<button onclick="restart()">Restart ▶</button>
+
+`;
+
+document.body.style.background =
+"linear-gradient(135deg,#ffffff,#eef3f9)";
+
+document.body.classList.remove("fade");
+
+},1500)
+
+}
+
+
+
+function restart(){
+
+document.body.innerHTML = `
+
+<h1 style="margin-top:140px">
+Let's start softer.
+</h1>
+
+<p style="font-size:26px;margin-top:30px">
+
+Not perfect.
+
+</p>
+
+<p style="font-size:26px">
+
+Just better.
+
+</p>
+
+<br><br>
+
+<p style="font-size:22px;color:#666">
+
+One step at a time.
+
+</p>
+
+`;
+
+}
+
+</script>
+
+</body>
+</html>
