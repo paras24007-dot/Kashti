@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Date Challenge</title>
+
+<style>
+
+body{
+background: linear-gradient(135deg,#f7f9fc,#e6edf5);
+font-family: Arial, Helvetica, sans-serif;
+text-align:center;
+margin-top:90px;
+overflow:hidden;
+}
+
+h1{
+font-size:36px;
+color:#333;
+padding:0 20px;
+}
+
+p{
+font-size:22px;
+color:#555;
+margin-top:10px;
+}
+
+#box{
+margin-top:40px;
+position:relative;
+height:400px;
+}
+
+button{
+display:block;
+margin:20px auto;
+padding:18px 30px;
+font-size:20px;
+border-radius:12px;
+border:none;
+cursor:pointer;
+width:300px;
+box-shadow:0 6px 15px rgba(0,0,0,0.2);
+}
+
+#opt1{
+background:#2f6fed;
+color:white;
+}
+
+#opt2{
+background:#444;
+color:white;
+}
+
+#opt3{
+background:#999;
+color:white;
+position:absolute;
+left:40%;
+top:250px;
+}
+
+</style>
+
+</head>
+
+<body>
+
+<h1>Kashti</h1>
+
+<p>
+I dare you not to go on a date with me.
+</p>
+
+<p>
+Pick your plan 😌
+</p>
+
+
+<div id="box">
+
+<button id="opt1" onclick="option1()">
+
+Dinner at Jehan Numa 🌙 <br>
+Under the Jamun Tree <br>
++ Stayover
+
+</button>
+
+
+<button id="opt2" onclick="option2()">
+
+Stay at Ivy 🛏️ <br>
+Order comfort food 🍕
+
+</button>
+
+
+<button id="opt3">
+
+I don't want to go 😒
+
+</button>
+
+
+</div>
+
+
+<script>
+
+const noBtn = document.getElementById("opt3");
+
+
+function escape(){
+
+const x = Math.random()*70;
+const y = Math.random()*70;
+
+noBtn.style.left = x+"%";
+noBtn.style.top = y+"%";
+
+noBtn.style.transform =
+"scale("+(1+Math.random()*0.3)+")";
+
+}
+
+noBtn.addEventListener("mouseover",escape);
+
+noBtn.addEventListener("touchstart",function(e){
+
+e.preventDefault();
+escape();
+
+});
+
+
+function option1(){
+
+document.body.innerHTML = `
+
+<h1 style="margin-top:150px">
+
+Excellent choice 😌
+
+</h1>
+
+<p style="font-size:26px;margin-top:20px">
+
+Jehan Numa it is.
+
+</p>
+
+<p style="margin-top:30px">
+
+I knew you'd accept the challenge.
+
+</p>
+
+`;
+
+}
+
+
+function option2(){
+
+document.body.innerHTML = `
+
+<h1 style="margin-top:150px">
+
+Perfect.
+
+</h1>
+
+<p style="font-size:26px;margin-top:20px">
+
+Ivy + comfort food it is.
+
+</p>
+
+<p style="margin-top:30px">
+
+Challenge accepted 😌
+
+</p>
+
+`;
+
+}
+
+
+</script>
+
+</body>
+</html>
